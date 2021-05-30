@@ -77,12 +77,12 @@ function setup() {
   pentagon = new polygon(200,200,20);
 
   //Sling
-  sling = new SlingShot(pentagon.body,{x:180,y:190})
+  sling1 = new SlingShot(pentagon.body,{x:180,y:190})
 }
 
 function draw() {
 
-  background(48,6,6); 
+  background(172, 173, 179); 
 
   Engine.update(engine);
   
@@ -125,14 +125,14 @@ function draw() {
   
   ground3.display();
 
-  sling.display();
+  sling1.display();
 
 
   //For instruction 
   strokeWeight(0);
-  fill("white");
+  fill("black");
   textSize(22);
-  text("Drag the Hexagonal Stone and Release it, to launch it towards the blocks",150,30);
+  text("Drag the Hexagonal Stone and Release it to Launch it Towards the Blocks",150,30);
   
 }
 //Mouse drag function
@@ -144,7 +144,7 @@ function mouseDragged()
 //mouse release function 
 function mouseReleased()
 {
-   sling.fly();
+   sling1.fly();
 }
 
 //keypressed function 
@@ -153,6 +153,6 @@ function keyPressed()
   if(keyCode===32)
   {
     Matter.Body.setPosition(pentagon.body,{x:100,y:200});
-    sling.attacher(pentagon.body);
+    sling1.attacher(pentagon.body);
   }
 }

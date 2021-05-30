@@ -7,7 +7,7 @@ class Box2 extends BaseClass
 
   display()
   {
-    fill(60, 242, 163);
+    fill(35, 209, 35);
     super.display();
   }
 }
